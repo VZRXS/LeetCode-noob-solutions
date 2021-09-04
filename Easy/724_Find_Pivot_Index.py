@@ -1,13 +1,11 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+
+from typing import List
 
 
 class Solution(object):
     # 724. Find Pivot Index
-    def pivotIndex(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
+    def pivotIndex(self, nums: List[int]) -> int:
         r = sum(nums) - nums[0]
         l = 0
         for i in range(len(nums)):

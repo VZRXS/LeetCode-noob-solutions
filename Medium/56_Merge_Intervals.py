@@ -1,13 +1,11 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+
+from typing import List
 
 
 class Solution(object):
     # 56. Merge Intervals
-    def merge(self, intervals):
-        """
-        :type intervals: List[List[int]]
-        :rtype: List[List[int]]
-        """
+    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
         if len(intervals) == 1:
             return intervals
         else:

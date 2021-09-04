@@ -1,12 +1,13 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+
+from typing import List
 
 
 class Solution(object):
     # Inverview 01.07. Rotate Matrix LCCI
-    def rotate(self, matrix):
+    def rotate(self, matrix: List[List[int]]) -> None:
         """
-        :type matrix: List[List[int]]
-        :rtype: None Do not return anything, modify matrix in-place instead.
+        Do not return anything, modify matrix in-place instead.
         """
         # Did not figure out
         for i in range(len(matrix) - 1):

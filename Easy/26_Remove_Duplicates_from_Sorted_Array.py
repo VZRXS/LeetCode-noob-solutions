@@ -1,13 +1,11 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+
+from typing import List
 
 
 class Solution(object):
     # 26. Remove Duplicates from Sorted Array
-    def removeDuplicates(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
+    def removeDuplicates(self, nums: List[int]) -> int:
         i = 0
         j = 1
         if len(nums) > 1:

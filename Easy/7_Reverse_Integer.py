@@ -1,13 +1,9 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 
 class Solution(object):
     # 7. Reverse Integer
-    def reverse(self, x):
-        """
-        :type x: int
-        :rtype: int
-        """
+    def reverse(self, x: int) -> int:
         xx = ''
         if x == 0:
             sign = 1
@@ -24,11 +20,7 @@ class Solution(object):
         else:
             return 0
 
-    def reverse_attempt2(self, x):
-        """
-        :type x: int
-        :rtype: int
-        """
+    def reverse_attempt2(self, x: int) -> int:
         if str(x).startswith('-'):
             xx = int(str(x)[:0:-1])
         else:

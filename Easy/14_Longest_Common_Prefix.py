@@ -1,13 +1,11 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+
+from typing import List
 
 
 class Solution(object):
     # 14. Longest Common Prefix
-    def longestCommonPrefix(self, strs):
-        """
-        :type strs: List[str]
-        :rtype: str
-        """
+    def longestCommonPrefix(self, strs: List[str]) -> str:
         if len(strs) > 1:
             minlen = min([len(x) for x in strs])
         else:

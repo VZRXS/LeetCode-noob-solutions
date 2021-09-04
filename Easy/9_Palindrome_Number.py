@@ -1,13 +1,9 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 
 class Solution(object):
     # 9. Palindrome Number
-    def isPalindrome(self, x):
-        """
-        :type x: int
-        :rtype: bool
-        """
+    def isPalindrome(self, x: int) -> bool:
         if x < 0:
             return False
         else:

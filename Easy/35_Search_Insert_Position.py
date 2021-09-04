@@ -1,14 +1,11 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+
+from typing import List
 
 
 class Solution(object):
     # 35. Search Insert Position
-    def searchInsert(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: int
-        """
+    def searchInsert(self, nums: List[int], target: int) -> int:
         for i in range(len(nums)):
             if nums[i] == target:
                 return i

@@ -1,13 +1,11 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+
+from typing import List
 
 
 class Solution(object):
     # 498. Diagonal Traverse
-    def findDiagonalOrder(self, mat):
-        """
-        :type mat: List[List[int]]
-        :rtype: List[int]
-        """
+    def findDiagonalOrder(self, mat: List[List[int]]) -> List[int]:
 
         if len(mat) == 1 or len(mat[0]) == 1:
             return [x for y in mat for x in y]
