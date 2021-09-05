@@ -16,7 +16,7 @@ class Solution(object):
         for i in range(len(matrix)):
             for j in range(len(matrix) // 2):
                 matrix[i][j], matrix[i][-1 - j] = matrix[i][-1 - j], matrix[i][j]
-        print(matrix)
+        # print(matrix)
 
         ##################################################
         # WRONG SOLUTION #################################
@@ -33,5 +33,4 @@ class Solution(object):
 
 
 if __name__ == '__main__':
-    print(
-        Solution().rotate(matrix=[[5, 1, 9, 11], [2, 4, 8, 10], [13, 3, 6, 7], [15, 14, 12, 16]]))
+    Solution().rotate(matrix=[[5, 1, 9, 11], [2, 4, 8, 10], [13, 3, 6, 7], [15, 14, 12, 16]])   # no return

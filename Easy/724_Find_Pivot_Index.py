@@ -13,7 +13,6 @@ class Solution(object):
                 return i
             l += nums[i]
             r -= nums[i + 1]
-
         return -1
 
 

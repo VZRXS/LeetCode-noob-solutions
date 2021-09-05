@@ -3,6 +3,7 @@
 
 class Solution(object):
     # 70. Climbing Stairs
+    # Dynamic programming
     def climbStairs(self, n: int) -> int:
         f = [1, 2]
         for i in range(2, n):

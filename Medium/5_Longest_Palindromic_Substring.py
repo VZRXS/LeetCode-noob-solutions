@@ -4,7 +4,6 @@
 class Solution(object):
     # 5. Longest Palindromic Substring
     def longestPalindrome(self, s: str) -> str:
-
         output = s[0]
         maxlen = len(output)
         for _ in range(len(s)):
@@ -23,11 +22,7 @@ class Solution(object):
                 return output
         return output
 
-    def longestPalindrome_attemp2(self, s):
-        """
-        :type s: str
-        :rtype: str
-        """
+    def longestPalindrome_attempt2(self, s: str) -> str:
         # SLOWER THAN THE ABOVE ONE
         output = s[0]
         maxlen = len(output)
