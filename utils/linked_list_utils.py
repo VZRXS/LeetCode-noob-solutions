@@ -3,7 +3,7 @@
 Customized linked list utilities
 """
 
-from typing import List
+from typing import List, Optional
 
 
 class ListNode:
@@ -102,16 +102,16 @@ class LinkedList:
             except:
                 return
 
-    def list2LinkedList(self, input_list: List) -> ListNode:
+    def list2LinkedList(self, input_list: List) -> Optional[ListNode]:
         """
         Convert list into linked list.
         """
         obj = LinkedList()
-        for val in input_list:
-            obj.addAtTail(val)
+        for val in input_list[::-1]:
+            obj.addAtHead(val)
         return obj.head
 
-    def linkedList2List(self, head: ListNode) -> List:
+    def linkedList2List(self, head: Optional[ListNode]) -> List:
         """
         Convert linked list into list.
         """
