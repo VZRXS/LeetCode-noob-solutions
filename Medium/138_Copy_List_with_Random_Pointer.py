@@ -17,8 +17,7 @@ class Solution(object):
             newcur.next = Node(x=cur.val)
             cur = cur.next
             newcur = newcur.next
-            
-            
+
         # add random attribute
         # cur: node to add random attribute
         # cur2: node pointed by random attribute
