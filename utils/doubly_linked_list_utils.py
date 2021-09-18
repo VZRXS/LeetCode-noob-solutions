@@ -83,12 +83,11 @@ class MultilevelDoublyLinkedList:
         """
         Convert list into multilevel doubly linked list.
         """
-        obj = MultilevelDoublyLinkedList()
         try:
-            obj.addFirstNode(val=input_list[0])
+            self.addFirstNode(val=input_list[0])
         except:
-            return obj.head
-        head_parent = obj.head
+            return self.head
+        head_parent = self.head
         fast = 1
         slow = 0
         while fast < len(input_list):
@@ -96,13 +95,13 @@ class MultilevelDoublyLinkedList:
                 slow = fast
             elif input_list[fast] is not None and input_list[slow] is None:
                 head_child = MultilevelNode(val=input_list[fast])
-                obj.addChild2Index(head=head_parent, head_child=head_child, index=fast - slow - 1)
+                self.addChild2Index(head=head_parent, head_child=head_child, index=fast - slow - 1)
                 head_parent = head_child
                 slow = fast
             elif input_list[fast] is not None and input_list[slow] is not None:
-                obj.addAtTail(head=head_parent, val=input_list[fast])
+                self.addAtTail(head=head_parent, val=input_list[fast])
             fast += 1
-        return obj.head
+        return self.head
 
     def linkedList2List(self, head: Optional[MultilevelNode]) -> Optional[List]:
         """
@@ -147,8 +146,7 @@ class MultilevelDoublyLinkedList:
         while cur:
             output_list.append(cur.val)
             cur = cur.next
-        obj = MultilevelDoublyLinkedList()
-        if obj.flattenCheck(head=head):
+        if self.flattenCheck(head=head):
             return output_list
         return f"The linked list {output_list} is not a valid doubly linked list."
 
@@ -189,12 +187,11 @@ class RandomLinkedList:
         """
         Convert list into random doubly linked list.
         """
-        obj = RandomLinkedList()
         for node in input_list:
-            obj.addAtTail(val=node[0])
-        cur = obj.head
+            self.addAtTail(val=node[0])
+        cur = self.head
         for node in input_list:
-            randomhead = obj.head
+            randomhead = self.head
             try:
                 for _ in range(node[1]):
                     randomhead = randomhead.next
@@ -202,8 +199,8 @@ class RandomLinkedList:
                 randomhead = None
             cur.random = randomhead
             cur = cur.next
-            randomhead = obj.head
-        return obj.head
+            randomhead = self.head
+        return self.head
 
     def linkedList2List(self, head: Optional[RandomNode]) -> List:
         """
@@ -229,7 +226,6 @@ class RandomLinkedList:
         """
         Check deep copy and convert random doubly linked list into list.
         """
-        obj = RandomLinkedList()
         cur_orig = head_orig
         cur_copy = head_copy
         while cur_orig:
@@ -237,4 +233,4 @@ class RandomLinkedList:
                 return f"Node with label {cur_copy.val} was not copied but a reference to the original one."
             cur_orig = cur_orig.next
             cur_copy = cur_copy.next
-        return obj.linkedList2List(head=head_copy)
+        return self.linkedList2List(head=head_copy)

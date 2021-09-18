@@ -106,10 +106,9 @@ class LinkedList:
         """
         Convert list into linked list.
         """
-        obj = LinkedList()
         for val in input_list[::-1]:
-            obj.addAtHead(val)
-        return obj.head
+            self.addAtHead(val)
+        return self.head
 
     def linkedList2List(self, head: Optional[ListNode]) -> List:
         """
